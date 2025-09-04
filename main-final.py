@@ -14,7 +14,13 @@ from pathlib import Path
 import polars as pl
 
 # --- NEW: Import the strategy functions ---
-from strategies import moving_average_crossover_strategy, rsi_oversold_strategy
+from strategies import (
+    moving_average_crossover_strategy,
+    rsi_oversold_strategy,
+    bollinger_bands_reversion_strategy,
+    macd_crossover_strategy,
+    stochastic_oversold_strategy
+)
 
 
 # --- Helper Function to Check for Required Packages ---
@@ -287,6 +293,9 @@ if __name__ == "__main__":
     STRATEGIES_TO_RUN = {
         "moving_average_crossover": moving_average_crossover_strategy,
         "rsi_oversold": rsi_oversold_strategy,
+        "bollinger_bands_reversion": bollinger_bands_reversion_strategy,
+        "macd_crossover": macd_crossover_strategy,
+        "stochastic_oversold": stochastic_oversold_strategy,
     }
 
     start_time = time.time()
